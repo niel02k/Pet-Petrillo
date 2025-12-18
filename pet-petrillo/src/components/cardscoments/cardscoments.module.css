@@ -1,157 +1,81 @@
-/* components/cardServicos/cardservicos.module.css */
-
-.cardServicos {
-  --cor-destaque: #2d8f4b; /* Variável CSS para a cor personalizada */
+/* components/cardscoments/cardscoments.module.css */
+.cardscoments {
+  background-color: #ffffff;
   border-radius: 12px;
-  padding: 24px;
-  background-color: white;
-  width: 100%;
-  max-width: 280px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  min-height: 220px;
   display: flex;
   flex-direction: column;
-  position: relative;
-  overflow: hidden;
+  gap: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e9ecef;
 }
 
-.cardServicos:hover {
-  box-shadow: 5px 5px 10px color-mix(in srgb, var(--cor-destaque) 60%, transparent);
-  transform: translateY(-4px);
+.cardscoments:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Container do ícone no topo */
-.cardIconeContainer {
-  width: 60px;
-  height: 60px;
-  border-radius: 12px;
-  background-color: var(--cor-destaque);
+.perfil {
+  width: 50px;
+  height: 50px;
+  background-color: #4f46e5;
+  color: white;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
-  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
-.cardIcone {
-  width: 30px;
-  height: 30px;
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
-.cardTitulo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 12px;
-  text-align: left;
+.titNome {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
 }
 
-.cardDescricao {
-  font-size: 0.95rem;
-  color: #666;
-  line-height: 1.5;
-  margin-bottom: 20px;
-  text-align: left;
+.subDono {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+  font-style: italic;
+}
+
+.estrelasWrapper {
+  margin: 8px 0;
+}
+
+.estrelasContainer {
+  display: flex;
+  gap: 4px;
+}
+
+.estrela {
+  color: #fbbf24;
+  font-size: 20px;
+}
+
+.comentarioContainer {
+  margin-top: 12px;
   flex-grow: 1;
 }
 
-.precoContainer {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--cor-destaque);
-  margin-bottom: 16px;
-  text-align: left;
-}
-
-.precoValor {
-  font-size: 2.2rem;
-  font-weight: 800;
-  
-}
-
-.cardDuracao {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 0.95rem;
-  color: #777;
-  margin-top: 8px;
-  padding-top: 12px;
-  border-top: 1px solid #f0f0f0;
-}
-.contrainercentral{
-  align-items: center;
-  display: flex;
-  gap: 40%;
-
-}
-.containerarrow{
-   width: 40px;
-   height: 40px;
-   color: white;
-   flex-shrink: 0;
-   border-radius: 50%;
-   align-items: center;
-   justify-content: center;
- 
-}
-.arrow{
-  width: 15px;
-   height: 15px;
-   color: white;
-   align-items: center;
-   justify-content: center;
-   margin: 12px;
-   padding: 0;
- 
-}
-
-.clock {
-
-  width: 20px;
-  height: 20px;
-  color: black;
-   flex-shrink: 0;
-
-
-}
-
-/* Linha decorativa colorida no topo (opcional) */
-.cardServicos::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
- 
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .cardServicos {
-    max-width: 45%;
-    padding: 20px;
-  }
-  
-  .cardTitulo {
-    font-size: 1.3rem;
-  }
-  
-  .precoContainer {
-    font-size: 1.6rem;
-  }
-  
-  .precoValor {
-    font-size: 2rem;
-  }
-  
-  .cardIconeContainer {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 16px;
-  }
-  
-  .cardIcone {
-    width: 24px;
-    height: 24px;
-  }
+.comentarioTexto {
+  font-size: 16px;
+  color: #374151;
+  line-height: 1.5;
+  margin: 0;
+  font-style: italic;
+  quotes: "«" "»";
 }

@@ -1,17 +1,14 @@
-// components/shared/CardServicos.tsx
-import { LucideIcon } from 'lucide-react';
-import { FaClock } from "react-icons/fa6";
-import { FaArrowRight } from "react-icons/fa";
-import style from '@/components/cardscoments/cardscoments.module.css'
 
-// variaveis para receber na tela oq for necessario 
+import style from '@/components/cardscoments/cardscoments.module.css'
+import Image from 'next/image';
+
+// Interface corrigida para receber os dados do comentário
 interface CardscomentsProps {
   nome: string;
   dono: string;
-  fotoperfil: number;
+  fotoperfil?: string; // Alterado para string para receber inicial ou URL
   comentario: string;
-  estrelas?: string; 
-
+  estrelas?: number; // Alterado para number para receber quantidade de estrelas
 }
 
 export function Cardscoments({
@@ -19,34 +16,47 @@ export function Cardscoments({
   dono,
   fotoperfil,
   comentario,
-  estrelas 
+  estrelas = 5 // Valor padrão de 5 estrelas
   
 }: CardscomentsProps) 
 {
-  return (
-    <div 
-      className={style.cardscoments}
-      style={{ } as React.CSSProperties}
-    >
-      {/* Ícone no topo */}
-      
-      <div  className={style.perfil}> {fotoperfil}</div>
-      <h3 className={style.titNome}>{nome}</h3>
-      <p className={style.subDono}>{dono}</p>
+  // Função para renderizar estrelas
+  const renderEstrelas = () => {
+    const estrelasArray = [];
+    for (let i = 0; i < 5; i++) {
+      estrelasArray.push(
+        <span key={i} className={style.estrela}>
+          {i < (estrelas || 0) ? <img src="https://i.ibb.co/QjfGSwLm/favicon.png" alt="Estrela de avaliação"/> : '' }
+        </span>
+      );
+    }
+    return <div className={style.estrelasContainer}>{estrelasArray}</div>;
+  };
 
-      <div className={style.containercentral}>
-        <div></div>
-      <div className={style.precoContainer}>
- 
-         <span className={style.precoValor}> {comentario}</span>
-      </div>
-     
+ const donoAnimal = `Dono do(a) ${dono}`;
+      // Obter inicial do nome para foto de perfil
+    return (
+    <div className={style.cardscoments}>
+      {/* Foto de perfil com inicial */}
+      <div className={style.perfil}>
+        <img src={fotoperfil} alt="" />
+        
       </div>
       
-      <div className={style.cardDuracao}>
-        <FaClock className={style.clock} ></FaClock>
-      
-        <span>{estrelas}</span>
+      {/* Informações do autor */}
+      <div className={style.infoContainer}>
+        <h3 className={style.titNome}>{nome}</h3>
+        <p className={style.subDono}>{donoAnimal}</p>
+      </div>
+
+      {/* Estrelas */}
+      <div className={style.estrelasWrapper}>
+        {renderEstrelas()}
+      </div>
+
+      {/* Comentário */}
+      <div className={style.comentarioContainer}>
+        <p className={style.comentarioTexto}>"{comentario}"</p>
       </div>
     </div>
   );
