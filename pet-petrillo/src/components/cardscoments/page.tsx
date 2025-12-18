@@ -30,17 +30,17 @@ export function Cardscoments({
     >
       {/* Ícone no topo */}
       
-      
-      <h3 className={style.cardTitulo}>{nome}</h3>
-      <p className={style.cardDescricao}>{dono}</p>
+      <div  className={style.perfil}> {fotoperfil}</div>
+      <h3 className={style.titNome}>{nome}</h3>
+      <p className={style.subDono}>{dono}</p>
 
-      <div className={style.contrainercentral}>
+      <div className={style.containercentral}>
+        <div></div>
       <div className={style.precoContainer}>
-        R$ <span className={style.precoValor}>{fotoperfil} {comentario}</span>
+ 
+         <span className={style.precoValor}> {comentario}</span>
       </div>
-      <div className={style.containerarrow} >
-         <FaArrowRight className={style.arrow} ></FaArrowRight>
-         </div>
+     
       </div>
       
       <div className={style.cardDuracao}>
