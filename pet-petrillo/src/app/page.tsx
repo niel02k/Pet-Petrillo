@@ -11,7 +11,7 @@ export default function () {
  <Button 
     texto="click aqui"
     corFundo="#rgb(11, 255, 88)"
-    corFundoHover="#rgba(47, 159, 83, 1)"
+    corFundoHover="(Escuro - hover, botões)"
     corText="white"
  />
 
