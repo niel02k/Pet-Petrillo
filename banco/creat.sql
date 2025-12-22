@@ -6,7 +6,7 @@ CREATE TABLE cliente(
 		CHECK (telefone REGEXP '^[0-9]{10,15}$'),
 	senha_hash VARCHAR(255) NOT NULL,
 	tipo ENUM ('adm', 'funcionario', 'cliente') NOT NULL,
-	endereco_id INT NOT NULL, -- FK IMPLEMENTAR
+	endereco_id INT NOT NULL,
 	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     
