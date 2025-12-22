@@ -38,6 +38,7 @@ export function Cardscoments({
     return (
     <div className={style.cardscoments}>
       {/* Foto de perfil com inicial */}
+      <div className={style.cardsperfil}>
       <div className={style.perfil}>
         <img src={fotoperfil} alt="" />
         
@@ -47,6 +48,7 @@ export function Cardscoments({
       <div className={style.infoContainer}>
         <h3 className={style.titNome}>{nome}</h3>
         <p className={style.subDono}>{donoAnimal}</p>
+      </div>
       </div>
 
       {/* Estrelas */}

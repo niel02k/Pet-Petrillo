@@ -1,0 +1,69 @@
+.cardpets {
+  width: 220px;
+  height: 260px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease; 
+}
+
+.fotopet {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; 
+}
+
+.fotopet img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+
+.infopet {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 14px;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 2; 
+}
+
+
+.cardpets:hover .infopet {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cardpets:hover {
+  background-color: rgba(0, 0, 0, 0.10);
+  
+}
+
+
+.cardpets:hover img {
+  filter: brightness(0.8);
+  transform: scale(1.1);
+  
+}
+
+
+
+.nomepet {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.racepet {
+  font-size: 0.8rem;
+  opacity: 0.9;
+  font-family: 'Nunito Sans', sans-serif; 
+}
