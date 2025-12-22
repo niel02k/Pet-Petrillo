@@ -1,16 +1,16 @@
 import Image from "next/image";
 import { Navbar } from "@/components/navbar/page";
 import { CardServicos } from "@/components/cardServicos/page";
-import { Cardscoments } from "@/components/cardscoments/page";  
 import { CardPets } from "@/components/cardPets/page";
 
-import Button from "@/components/button/page";
+
 
 
 export default function () {
   return (
 
   
+
  <CardPets 
   namePet="Luna"  
   racePet="vira-lata  " 

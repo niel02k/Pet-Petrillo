@@ -1,14 +1,34 @@
 import styles from '@/components/button/button.module.css';
+import { LucideIcon } from 'lucide-react';
 
 
-export default function Button(){
+interface ButtonProp {
+ texto:string;
+ icon?:LucideIcon;
+ corFundo?: string;
+ corFundoHover?:string
+ corText?:string;
+
+}
+
+export function Button({
+ texto,
+ icon:Icon,
+ corFundo ='#rgb(11, 255, 88)',
+ corFundoHover,
+ corText
+
+}: ButtonProp){
+
+
+
     return(
         <>
-        <div className={styles.fundobtn}>
-        <button className={styles.button}>
-        click aqui
-        </button>
-        </div>
+      
+            <button className={styles.button} style={{'background-color':corFundo, 'background-color-hover':corFundoHover, 'color':corText} as React.CSSProperties}>
+             {texto}
+            </button>
+     
         </>
     );
 }
