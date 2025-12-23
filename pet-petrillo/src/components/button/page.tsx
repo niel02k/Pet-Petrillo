@@ -14,8 +14,8 @@ interface ButtonProp {
 export function Button({
  texto,
  icon:Icon,
- corFundo ='#rgb(11, 255, 88)',
- corFundoHover,
+ corFundo ='rgb(11, 255, 88)',
+ corFundoHover= '#1A5D34',
  corText
 
 }: ButtonProp){
@@ -25,7 +25,7 @@ export function Button({
     return(
         <>
       
-            <button className={styles.button} style={{'background-color':corFundo, 'background-color-hover':corFundoHover, 'color':corText} as React.CSSProperties}>
+            <button className={styles.button} style={{'--corFundo':corFundo, '--corFundoHover':corFundoHover, 'color':corText} as React.CSSProperties}>
              {texto}
             </button>
      

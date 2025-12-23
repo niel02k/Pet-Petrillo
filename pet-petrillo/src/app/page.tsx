@@ -2,22 +2,24 @@ import Image from "next/image";
 import { Navbar } from "@/components/navbar/page";
 import { CardServicos } from "@/components/cardServicos/page";
 import { CardPets } from "@/components/cardPets/page";
+import { Button } from "@/components/button/page";
 
 
 
 
-export default function () {
+export default function 
+() {
   return (
 
 
   
+ <Button 
+    texto="click aqui"
+    corFundo="rgba(11, 255, 88, 0.36)"
+    corText="white"
+    corFundoHover="Black"
+ />
 
-
- <CardPets 
-  namePet="Luna"  
-  racePet="vira-lata  " 
-  photoPet="https://png.pngtree.com/png-vector/20250111/ourmid/pngtree-golden-retriever-dog-pictures-png-image_15147078.png"  
-   />
 
 
 
