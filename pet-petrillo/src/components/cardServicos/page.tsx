@@ -11,7 +11,7 @@ interface CardServicosProps {
   preco: number;
   duracao: string;
   corDestaque?: string; 
-  Icone?: LucideIcon; 
+  Icone?:  React.ComponentType;
   corFundo?: string;
 }
 
@@ -33,7 +33,7 @@ export function CardServicos({
       {/* Ícone no topo */}
       {Icone && (
         <div className={style.cardIconeContainer}>
-          <Icone className={style.cardIcone} />
+          <Icone />
         </div>
       )}
       

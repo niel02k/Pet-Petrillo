@@ -1,10 +1,10 @@
 import styles from '@/components/button/button.module.css';
-import { LucideIcon } from 'lucide-react';
+
 
 
 interface ButtonProp {
  texto:string;
- icon?:LucideIcon;
+Icone?:  React.ComponentType;
  corFundo?: string;
  corFundoHover?:string
  corText?:string;
@@ -13,7 +13,7 @@ interface ButtonProp {
 
 export function Button({
  texto,
- icon:Icon,
+ Icone,
  corFundo ='rgb(11, 255, 88)',
  corFundoHover= '#1A5D34',
  corText
@@ -26,7 +26,8 @@ export function Button({
         <>
       
             <button className={styles.button} style={{'--corFundo':corFundo, '--corFundoHover':corFundoHover, 'color':corText} as React.CSSProperties}>
-             {texto}
+             {texto} {Icone && <Icone />}
+         
             </button>
      
         </>

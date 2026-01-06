@@ -1,0 +1,17 @@
+.servicosCards{
+    padding: 60px 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5vw;
+}
+.buttonservices{
+    width:200px;
+    height:50px;
+    transition: transform 0.7s ease;
+    align-items: center;
+    justify-content: center;
+    margin-left:45vw ;
+
+}   
