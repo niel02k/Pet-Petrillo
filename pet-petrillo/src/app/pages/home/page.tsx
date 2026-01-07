@@ -17,9 +17,9 @@ export default function Home() {
     <div className={style.container}>
       <Navbar></Navbar>
 
-      <div className={style.servicoscontainer}>
+      <div className={style.servicescontainer}>
 
-        <h2 className={style.servicostitulo}>Nossos Serviços</h2>   
+        <h2 className={style.servicostitulo}>Tudo que seu pet precisa</h2>   
         <div className={style.servicosCards}>
           <CardServicos
             titulo="Banho"

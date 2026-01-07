@@ -1,0 +1,6 @@
+@PetPetrillo.API_HostAddress = http://localhost:5282
+
+GET {{PetPetrillo.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
