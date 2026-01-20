@@ -18,6 +18,7 @@
     height:50px;
     border-radius:15px;
     transition: transform 0.7s ease;
+  
 }
 .button:hover{
     transform: translateY(-9px);

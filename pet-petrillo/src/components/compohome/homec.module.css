@@ -34,3 +34,8 @@
     align-items: center;
     
 }
+.buttonservices{
+   display:flex;
+   justify-content: start;
+   align-items: start;
+}
