@@ -57,7 +57,7 @@ export default function Home() {
             corFundo="#212529 "
             corFundoHover="#2E8B57"
             corText="#ffffff"
-            texto="Ver todos os serviços   "
+            texto="Ver todos os serviços "
             Icone={FaArrowRight}
           />
         </div>
